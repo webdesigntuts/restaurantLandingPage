@@ -1,0 +1,85 @@
+@use "mixins";
+.container {
+    display: flex;
+    flex-direction: column;
+    @include mixins.maxWidth();
+    .title {
+        text-align: center;
+        margin-top: 5rem;
+        margin-bottom: 2rem;
+        padding: 0rem 1rem;
+        h1 {
+            font-family: "Architects Daughter", cursive;
+            font-size: 2.1rem;
+            color: var(--color-btn);
+            margin-bottom: 1rem;
+            @media screen and (max-width: 440px) {
+                font-size: max(6vw, 1.5rem);
+            }
+        }
+        h2 {
+            font-size: 2.8rem;
+            color: whitesmoke;
+            @media screen and (max-width: 550px) {
+                font-size: max(8vw, 1.2rem);
+            }
+        }
+    }
+
+    .cards {
+        margin-top: 5rem;
+        margin-bottom: 10rem;
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        justify-content: center;
+        @media screen and (max-width: 860px) {
+            gap: 0;
+            margin: 5rem 2rem;
+        }
+
+        @media screen and (max-width: 440px) {
+            flex-direction: column;
+        }
+
+        .row1,
+        .row2 {
+            display: flex;
+            gap: 2rem;
+            @media screen and (max-width: 860px) {
+                flex-direction: column;
+            }
+        }
+    }
+}
+
+.cardContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 0.8rem;
+    .iconContainer {
+        width: max-content;
+        line-height: 0;
+        padding: 1.3rem;
+        border-radius: 50%;
+        background: rgba(175, 175, 175, 0.45);
+        svg {
+            width: 120px;
+            height: 120px;
+        }
+    }
+    h2 {
+        margin-top: 1rem;
+        color: whitesmoke;
+        font-size: 1.5rem;
+    }
+
+    p {
+        margin-top: 0.7rem;
+        font-size: 1rem;
+        color: var(--color-text);
+        max-width: 300px;
+    }
+}

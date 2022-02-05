@@ -1,0 +1,67 @@
+@use "mixins";
+.container {
+    @include mixins.maxWidth();
+    .title {
+        text-align: center;
+        margin-top: 5rem;
+        margin-bottom: 2rem;
+        padding: 0rem 1rem;
+        h1 {
+            font-family: "Architects Daughter", cursive;
+            font-size: 2.1rem;
+            color: var(--color-btn);
+            margin-bottom: 1rem;
+            @media screen and (max-width: 440px) {
+                font-size: max(6vw, 1.5rem);
+            }
+        }
+        h2 {
+            font-size: 2.8rem;
+            color: whitesmoke;
+            @media screen and (max-width: 550px) {
+                font-size: max(8vw, 1.2rem);
+            }
+        }
+    }
+    .dishes {
+        display: flex;
+        justify-content: space-around;
+        @media screen and (max-width: 640px) {
+            --gap: 0.5rem;
+            .col1,
+            .col2 {
+                display: flex;
+                flex-direction: column;
+                gap: var(--gap);
+            }
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: var(--gap);
+        }
+    }
+}
+
+.disheContainer {
+    margin: 1rem;
+    width: max-content;
+
+    .dishe {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 1rem;
+        .name {
+            font-size: 1.5rem;
+            color: whitesmoke;
+        }
+        .price {
+            font-size: 1.5rem;
+            color: var(--color-btn);
+        }
+    }
+    p {
+        font-size: 1rem;
+        color: var(--color-text);
+        width: max(25vw, 280px);
+    }
+}

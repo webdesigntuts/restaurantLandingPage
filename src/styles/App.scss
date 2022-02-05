@@ -1,0 +1,55 @@
+//GOOGLE FONT POPPINS
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    list-style: none;
+    text-decoration: none;
+    color: black;
+    box-sizing: border-box;
+    line-height: 1.6;
+    font-family: "Poppins", sans-serif;
+    //font-family: 'Architects Daughter', cursive;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: var(--color-bg);
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    border-radius: 20px;
+    background: var(--color-text);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color-btn);
+}
+
+:root {
+    scrollbar-width: thin !important;
+    scrollbar-color: var(--color-text) var(--color-bg) !important;
+    --color-bg: #2c2822;
+    --color-btn: #dfae67;
+    --color-text: #a9a7a5;
+}
+
+::-webkit-scrollbar {
+    width: 0.4em;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    background: var(--color-bg);
+    overflow-x: hidden;
+    position: relative;
+}

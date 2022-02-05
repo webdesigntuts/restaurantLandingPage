@@ -1,0 +1,93 @@
+.nav {
+    position: relative;
+    z-index: 99;
+    display: flex;
+    width: 100%;
+
+    .logo {
+        font-family: "Architects Daughter", cursive;
+        font-size: 2.4rem;
+        color: var(--color-btn);
+        cursor: pointer;
+        transition: color ease 0.3s;
+        &:hover {
+            color: var(--color-text);
+        }
+    }
+
+    .menu {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 1.2rem;
+        width: max-content;
+        background: #2c28224b;
+        margin-left: auto;
+        padding: 0rem 4rem;
+
+        @media screen and (max-width: 768px) {
+            position: fixed;
+            flex-direction: column;
+            align-items: flex-end;
+            justify-content: flex-start;
+            width: max-content;
+            right: 0;
+            top: 0;
+            height: 100vh;
+            background: var(--color-btn);
+            transform: translateX(100%);
+            border-radius: 0;
+            padding: 0;
+            transition: transform 200ms ease-in-out;
+        }
+
+        li {
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: whitesmoke;
+            cursor: pointer;
+            transition: color ease 0.3s;
+
+            &:hover {
+                color: var(--color-btn);
+            }
+            @media screen and (max-width: 768px) {
+                &:first-child {
+                    margin-top: 2rem;
+                }
+
+                padding: 0.5rem 2rem;
+            }
+        }
+    }
+
+    .mobileFaTimes,
+    .mobileBars {
+        cursor: pointer;
+        display: none;
+        @media screen and (max-width: 768px) {
+            display: flex;
+            align-items: center;
+            svg {
+                fill: whitesmoke;
+                width: 25px;
+                height: 25px;
+            }
+        }
+    }
+
+    .mobileBars {
+        position: fixed;
+        top: 2rem;
+        right: 1rem;
+        padding: 1rem;
+        background: var(--color-btn);
+        border-radius: 50%;
+    }
+
+    .menuMobileActive {
+        @media screen and (max-width: 768px) {
+            transform: translateX(0);
+        }
+    }
+}
